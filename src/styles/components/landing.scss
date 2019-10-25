@@ -1,9 +1,51 @@
+@import '../variables.scss';
+.outter-wrapper{
+    overflow: hidden;
+}
 .fullPage-landing{
     width: 100vw;
     height: 100vh;
     background-color: darkgrey;
+    background: url('./../img/bgs/2019-bg-lg.jpg') no-repeat left center fixed; 
+    background-size: cover;
+    .title-wrapper{
+        width: 500px;
+        
+    }
     h1{
+        color: $dark-blue;
         margin: 0;
         padding: 0;
+        font-family: $jomo;
+        font-weight: normal;
+    }
+    h3{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        text-align: center;
+        font-family: $bigshoulders;
+        font-size: 50px;
+          
+          &:before,
+          &:after {
+            background-color: #000;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+          }
+          
+          &:before {
+            right: 0.5em;
+            margin-left: -50%;
+          }
+          
+          &:after {
+            left: 0.5em;
+            margin-right: -50%;
+          }
     }
 }

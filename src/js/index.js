@@ -12,7 +12,7 @@ class App extends React.Component{
         return(
             <div>
                 {/* <Header/> */}
-                <LandingScreen title="" />
+                <LandingScreen title="Best Albums of" subtitle="2019" />
                 <HelloMessage name="" />
                 <TestRepeater/>
             </div>
