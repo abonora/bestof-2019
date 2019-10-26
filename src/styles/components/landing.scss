@@ -6,11 +6,33 @@
     width: 100vw;
     height: 100vh;
     background-color: darkgrey;
-    background: url('./../img/bgs/2019-bg-lg.jpg') no-repeat left center fixed; 
+    background: url('./../img/bgs/2019-bg-sm.jpg') no-repeat right -120px bottom;
     background-size: cover;
+
+    @media only screen and (min-width: $screen-sm){
+        background: url('./../img/bgs/2019-bg-lg.jpg') no-repeat left center;  
+        background-size: cover;  
+    }
+
     .title-wrapper{
-        width: 500px;
-        
+        width: 100%;
+        @media only screen and (min-width: $screen-sm){
+            width: 65%;   
+        }
+        @media only screen and (min-width: $screen-md){
+            width: 50%;   
+        }
+        display: table;
+        height: 100%;
+    }
+    .title-cell{
+        display: table-cell;
+        vertical-align: top;
+        padding-top: 30px;
+        @media only screen and (min-width: $screen-sm){
+            vertical-align: middle;
+            padding-top: 0;
+        }
     }
     h1{
         color: $dark-blue;
@@ -18,34 +40,49 @@
         padding: 0;
         font-family: $jomo;
         font-weight: normal;
+        font-size: 40px;
+        line-height: 1em;
+        @media only screen and (min-width: $screen-sm){
+            font-size: 44px;
+            line-height: normal;
+        }
+        @media only screen and (min-width: $screen-md){
+            font-size: 55px;
+        }
     }
     h3{
         margin: 0;
-        padding: 0;
+        padding: 0 30%;
         overflow: hidden;
         text-align: center;
         font-family: $bigshoulders;
         font-size: 50px;
-          
-          &:before,
-          &:after {
-            background-color: #000;
+        color: $dark-blue;
+        line-height: 1em;
+        &.site-name{
+            line-height: normal;
+            font-size: 17px;
+        }
+        
+        &:before,
+        &:after {
+            background-color: $dark-blue;
             content: "";
             display: inline-block;
             height: 1px;
             position: relative;
             vertical-align: middle;
-            width: 50%;
-          }
-          
-          &:before {
+            width: 50%; 
+        }
+        
+        &:before {
             right: 0.5em;
             margin-left: -50%;
-          }
-          
-          &:after {
+        }
+        
+        &:after {
             left: 0.5em;
             margin-right: -50%;
-          }
+        }
     }
 }

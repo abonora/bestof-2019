@@ -7,9 +7,13 @@ class LandingScreen extends React.Component {
         return <div className="outter-wrapper">
             <div className="fullPage-landing">
                 <div className="title-wrapper">
-                    <h1>{landingTitle ? landingTitle : 'Displayed if no prop passed'}</h1>
-                    <h3>{landingSubtitle ? landingSubtitle : ''}</h3>
+                    <div className="title-cell">
+                        <h3 className="site-name">albertobonora.com</h3>
+                        <h1>{landingTitle ? landingTitle : 'Displayed if no prop passed'}</h1>
+                        <h3>{landingSubtitle ? landingSubtitle : ''}</h3>
+                    </div>
                 </div>
+               
             </div>
         </div>
     }
