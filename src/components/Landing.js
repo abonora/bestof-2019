@@ -11,9 +11,9 @@ class LandingScreen extends React.Component {
                         <h3 className="site-name">albertobonora.com</h3>
                         <h1>{landingTitle ? landingTitle : 'Displayed if no prop passed'}</h1>
                         <h3>{landingSubtitle ? landingSubtitle : ''}</h3>
+                        <div className="scroll">scoll to begin</div>
                     </div>
                 </div>
-               
             </div>
         </div>
     }

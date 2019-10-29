@@ -1,4 +1,28 @@
 @import '../variables.scss';
+@keyframes pulse {
+    0% {
+        opacity: .5;
+        // transform: scale(1);
+    }
+
+    // 25% {
+    //     transform: scale(1.25);
+    // }
+
+    50% {
+        opacity: 1;
+        //transform: scale(1.15);
+    }
+
+    // 75% {
+    //     transform: scale(1.25)
+    // }
+
+    100% {
+        opacity: .5;
+        // transform: scale(1);
+    }
+}
 .outter-wrapper{
     overflow: hidden;
 }
@@ -14,6 +38,16 @@
         background-size: cover;  
     }
 
+    .scroll{
+        color: $dark-blue;
+        font-family: $bigshoulders;
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        animation: 2s ease infinite pulse;
+    }
+
     .title-wrapper{
         width: 100%;
         @media only screen and (min-width: $screen-sm){
@@ -24,6 +58,7 @@
         }
         display: table;
         height: 100%;
+        position: relative;
     }
     .title-cell{
         display: table-cell;
