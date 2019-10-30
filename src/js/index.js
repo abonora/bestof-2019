@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import HelloMessage from '../components/HelloMessage';
 import LandingScreen from '../components/Landing';
 import TestRepeater from '../components/TestRepeater';
+import AlbumList from '../components/AlbumsList';
 import '../styles/styles.scss';
 
 
@@ -13,8 +14,9 @@ class App extends React.Component{
             <div>
                 {/* <Header/> */}
                 <LandingScreen title="Best Albums of" subtitle="2019" />
-                <HelloMessage name="" />
-                <TestRepeater/>
+                {/* <HelloMessage name="" />
+                <TestRepeater/> */}
+                <AlbumList yearfilter="2019" />
             </div>
         )
     }
