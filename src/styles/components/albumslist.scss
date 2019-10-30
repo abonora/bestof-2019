@@ -4,6 +4,9 @@
   height: 70px;
   color: lightgray;
   font-size: 11px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .inner-wrapper{
@@ -19,6 +22,7 @@
   width: 90%;
   margin: 0 auto;
   text-align: left;
+  padding-top: 25px;
 
   .album{
     position: relative;

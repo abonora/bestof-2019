@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/abonora/bestof-2019#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.0",
     "postcss-modules": "^1.4.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

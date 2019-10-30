@@ -7,7 +7,7 @@ class AlbumList extends React.Component {
             <div className="container">
               <div className="headerbar">somewhere in here will be a logo and maybe progress bar and will be sticky once page is longer</div>
               <div className="inner-wrapper">
-                <h1>Hello {year ? year : " best albums"}</h1>
+                {/* <h1>Hello {year ? year : " best albums"}</h1> */}
                 <div className="albums-wrapper">
                   <div className="album">
                     <div className="album-details">
