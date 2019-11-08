@@ -16,6 +16,22 @@
   max-width: $screen-lg;
   margin: 0 auto;
   padding-bottom: 50px;
+  .copy-wrapper{
+    font-family: $jomo;
+    font-size: 14px;
+    color: $dark-blue;
+
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    p{
+      margin: 0;
+      padding: 20px 0 0 0;
+      &:nth-last-of-type(){
+        border-bottom: solid 1px lightgray;
+      }
+    }
+  }
 }
 
 .albums-wrapper{
