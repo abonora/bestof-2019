@@ -59,9 +59,13 @@
       }
     }
     .album-details{
-      height: 200px;
+      min-height: 200px;
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      @media only screen and (min-width: $screen-sm){
+        flex-wrap: nowrap;
+      }
       margin-bottom: 20px;
       .album-number{
         width: 200px;
@@ -84,8 +88,11 @@
         }
       }
       .album-cover{
-        width: 200px;
+        width: 200px; // this needs to be in a media query for a bigger size when dealing with other break points
         height: 200px;
+        img{
+          width: 100%;
+        }
       }
     }
 
