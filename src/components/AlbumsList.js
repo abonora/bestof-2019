@@ -27,7 +27,7 @@ class AlbumList extends React.Component {
                       <div className="album-video-embed"></div>
                       <div className="album-description">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus nunc nec egestas suscipit. Pellentesque ut vestibulum purus. Phasellus luctus massa ac est semper, in lacinia magna venenatis. Donec metus lorem, aliquet quis neque in, mattis viverra ex. Aliquam erat volutpat. Maecenas ultrices purus sit amet diam auctor ultricies. Ut feugiat orci vitae eros pulvinar, et porttitor enim ullamcorper. Duis erat sem, commodo ac nisl vel, interdum sagittis ipsum. Maecenas sit amet dignissim arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <h6>Essential Tracks</h6>
+                        <h4>Essential Tracks</h4>
                         <ul>
                           <li>Track 1</li>
                           <li>Track 2</li>

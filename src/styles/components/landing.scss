@@ -27,13 +27,13 @@
     //overflow: hidden;
 }
 .fullPage-landing{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: darkgrey;
     background: url('./../img/bgs/2019-bg-sm.jpg') no-repeat right -120px bottom;
     background-size: cover;
 
-    @media only screen and (min-width: $screen-sm){
+    @media only screen and (min-width: $screen-md){
         background: url('./../img/bgs/2019-bg-lg.jpg') no-repeat left center;  
         background-size: cover;  
     }

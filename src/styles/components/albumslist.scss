@@ -27,6 +27,11 @@
     p{
       margin: 0;
       padding: 20px 0 0 0;
+      text-align: center;
+
+      @media only screen and (min-width: $screen-sm){
+        text-align: left;
+      }
       &:nth-last-of-type(){
         border-bottom: solid 1px lightgray;
       }
@@ -65,6 +70,20 @@
       .album-description{
         width: 300px;
         padding-left: 15px;
+
+        font-family: $jomo;
+        font-size: 14px;
+        color: $dark-blue;
+
+        @media only screen and (max-width: $screen-xs-max){
+          text-align: center;
+          padding-left: 0;
+        }
+
+        h4,
+        ul{
+          text-align: left;
+        }
   
         p,
         h5,
@@ -84,7 +103,12 @@
       }
       margin-bottom: 20px;
       .album-number{
-        width: 200px;
+        width: 100px;
+        font-size: 30px;
+        font-family: $bigshoulders;
+        @media only screen and (min-width: $screen-sm){
+          width: 200px;
+        }
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -95,7 +119,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 20px;
+        @media only screen and (min-width: $screen-sm){
+          padding-right: 20px;
+        }
   
         h3,
         h4{
@@ -104,10 +130,20 @@
         }
       }
       .album-cover{
-        width: 200px; // this needs to be in a media query for a bigger size when dealing with other break points
-        height: 200px;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        @media only screen and (min-width: $screen-sm){
+          width: 200px; // this needs to be in a media query for a bigger size when dealing with other break points
+          height: 200px;
+        }
         img{
-          width: 100%;
+          width: 200px; // this needs to be in a media query for a bigger size when dealing with other break points
+          height: 200px;
+          @media only screen and (min-width: $screen-sm){
+            height: auto;
+            width: 100%;  
+          }
         }
       }
     }
