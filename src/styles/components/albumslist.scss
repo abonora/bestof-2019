@@ -7,6 +7,21 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  text-align: left;
+  line-height: 70px;
+  .inner-wrapper{
+    background: none;
+    padding: 0;
+    display: flex;
+  }
+  h3{
+    padding: 0;
+    margin: 0;
+    flex-basis: 50%;
+    &:nth-of-type(even){
+      text-align: right;
+    }
+  }
 }
 
 .inner-wrapper{
@@ -61,14 +76,26 @@
 
     .album-review{
       display: flex;
-      flex-direction: row;
+      @media only screen and (min-width: $screen-sm){
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
   
       .album-video-embed{
-        flex: auto;
+        width: 100%;
+        height: 100px;
+        flex-shrink: 0;
+        @media only screen and (min-width: $screen-sm){
+          flex: auto;
+          flex-basis: 50%;
+        }
+        
         background: #000;
       }
       .album-description{
-        width: 300px;
+        //width: 300px;
         padding-left: 15px;
 
         font-family: $jomo;
@@ -78,6 +105,10 @@
         @media only screen and (max-width: $screen-xs-max){
           text-align: center;
           padding-left: 0;
+        }
+        @media only screen and (min-width: $screen-sm){
+          flex: auto;
+          flex-basis: 50%;
         }
 
         h4,

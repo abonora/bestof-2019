@@ -3,9 +3,16 @@ import React from 'react';
 class AlbumList extends React.Component {
     render() {
         const year = this.props.yearfilter;
+        const headerTitle = this.props.headerTitle;
+        const site = this.props.site;
         return <div className="outter-wrapper">
             <div className="container">
-              <div className="headerbar">somewhere in here will be a logo and maybe progress bar and will be sticky once page is longer</div>
+              <div className="headerbar">
+                <div className="inner-wrapper">
+                  <h3>{headerTitle}</h3>
+                  <h3>{site}</h3>
+                </div>
+              </div>
               <div className="inner-wrapper">
                 {/* <h1>Hello {year ? year : " best albums"}</h1> */}
                 <div className="copy-wrapper">
