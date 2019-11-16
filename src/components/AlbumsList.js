@@ -31,12 +31,16 @@ class AlbumList extends React.Component {
                       </div>
                     </div>
                     <div className="album-review">
-                      <div className="album-video-embed"></div>
+                      <div className="album-video-embed">
+                        <div className="youtube-wrapper">
+                          <iframe src="https://www.youtube.com/embed/deDIf-v6OK4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        </div>
+                      </div>
                       <div className="album-description">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus nunc nec egestas suscipit. Pellentesque ut vestibulum purus. Phasellus luctus massa ac est semper, in lacinia magna venenatis. Donec metus lorem, aliquet quis neque in, mattis viverra ex. Aliquam erat volutpat. Maecenas ultrices purus sit amet diam auctor ultricies. Ut feugiat orci vitae eros pulvinar, et porttitor enim ullamcorper. Duis erat sem, commodo ac nisl vel, interdum sagittis ipsum. Maecenas sit amet dignissim arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <h4>Essential Tracks</h4>
                         <ul>
-                          <li>Track 1</li>
+                          <li><a href="#" target="_blank" title="Track 1">Track 1</a></li>
                           <li>Track 2</li>
                           <li>Track 3</li>
                         </ul>

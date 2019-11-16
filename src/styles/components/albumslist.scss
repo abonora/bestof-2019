@@ -18,8 +18,12 @@
     padding: 0;
     margin: 0;
     flex-basis: 50%;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: $bigshoulders;
     &:nth-of-type(even){
       text-align: right;
+      font-size: 15px;
     }
   }
 }
@@ -85,14 +89,28 @@
   
       .album-video-embed{
         width: 100%;
-        height: 100px;
+        //height: 100px;
         flex-shrink: 0;
         @media only screen and (min-width: $screen-sm){
           flex: auto;
           flex-basis: 50%;
         }
         
-        background: #000;
+        //background: #000;
+        .youtube-wrapper{
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
       .album-description{
         //width: 300px;
@@ -111,9 +129,22 @@
           flex-basis: 50%;
         }
 
-        h4,
+        h4{
+          margin-bottom: 0;
+          text-align: left;
+          font-family: $bigshoulders;
+          font-size: 18px;
+        }
+
         ul{
           text-align: left;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li{
+            padding-left: 25px;
+            //background: url('./../img/cassette-tape.svg') no-repeat top left;
+          }
         }
   
         p,
@@ -121,6 +152,15 @@
         h6{
           margin: 0;
           padding: 0;
+        }
+
+        a{
+          color: $dark-blue;
+          font-family: $bigshoulders;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -139,6 +179,7 @@
         font-family: $bigshoulders;
         @media only screen and (min-width: $screen-sm){
           width: 200px;
+          font-size: 60px;
         }
         display: flex;
         flex-direction: column;
@@ -158,6 +199,18 @@
         h4{
           padding: 0;
           margin:0;
+        }
+        h3{
+          color: $dark-blue;
+          @media only screen and (min-width: $screen-sm){
+            font-size: 30px;
+          }
+        }
+        h4{
+          color: $medium-grey;
+          @media only screen and (min-width: $screen-sm){
+            font-size: 22px;
+          }
         }
       }
       .album-cover{

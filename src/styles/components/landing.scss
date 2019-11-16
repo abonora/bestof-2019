@@ -2,29 +2,14 @@
 @keyframes pulse {
     0% {
         opacity: .5;
-        // transform: scale(1);
     }
-
-    // 25% {
-    //     transform: scale(1.25);
-    // }
-
     50% {
         opacity: 1;
-        //transform: scale(1.15);
     }
-
-    // 75% {
-    //     transform: scale(1.25)
-    // }
 
     100% {
         opacity: .5;
-        // transform: scale(1);
     }
-}
-.outter-wrapper{
-    //overflow: hidden;
 }
 .fullPage-landing{
     width: 100%;
@@ -32,6 +17,10 @@
     background-color: darkgrey;
     background: url('./../img/bgs/2019-bg-sm.jpg') no-repeat right -120px bottom;
     background-size: cover;
+
+    @media only screen and (min-width: $screen-sm){
+        background-position-x: right -20px;
+    }
 
     @media only screen and (min-width: $screen-md){
         background: url('./../img/bgs/2019-bg-lg.jpg') no-repeat left center;  
