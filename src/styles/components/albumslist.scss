@@ -91,9 +91,11 @@
         width: 100%;
         //height: 100px;
         flex-shrink: 0;
+        margin-top: 10px;
         @media only screen and (min-width: $screen-sm){
           flex: auto;
           flex-basis: 50%;
+          margin-top: 0;
         }
         
         //background: #000;
@@ -142,8 +144,19 @@
           margin: 0;
           padding: 0;
           li{
-            padding-left: 25px;
-            //background: url('./../img/cassette-tape.svg') no-repeat top left;
+            position: relative;
+            &:before{
+              display: block;
+              position: relative;
+              float: left;
+              width: 20px;
+              height: 20px;
+              background-image: url('./../img/video-external.png');
+              background-size: 20px;
+              margin-top: 1px;
+              margin-right: 5px;
+              content: '';
+            }
           }
         }
   
