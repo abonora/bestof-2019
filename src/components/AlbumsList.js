@@ -11,7 +11,7 @@ class AlbumList extends React.Component {
   }
 
   componentDidMount(){
-      fetch("https://albertobonora.com/feeds/wp-json/wp/v2/albums?filter[category_name]=best-of-2019")
+      fetch("https://albertobonora.com/feeds/wp-json/wp/v2/albums?filter[category_name]=best-of-2019&filter[posts_per_page]=50")
       .then(res => res.json())
       .then(
           (result) => {
@@ -66,8 +66,8 @@ class AlbumList extends React.Component {
                         <div className="album-details">
                             <span className="album-number">#{item.meta_box.rank}</span>
                             <div className="album-title-artist">
-                              <h3>{item.title.rendered}</h3>
-                              <h4>{item.meta_box.artist}</h4>
+                              <h3 dangerouslySetInnerHTML={this.createMarkup(item.title.rendered) }></h3>
+                              <h4 dangerouslySetInnerHTML={this.createMarkup(item.meta_box.artist) }></h4>
                             </div>
                             <div className="album-cover">
                               <img src={item.meta_box.albumArt[0].full_url} alt={item.title.rendered + " - " + item.meta_box.artist} title={item.title.rendered + " - " + item.meta_box.artist} />
