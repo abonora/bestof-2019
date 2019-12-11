@@ -1,4 +1,5 @@
 import React from 'react';
+import 'lazysizes';
 
 class AlbumList extends React.Component {
   constructor(props){
@@ -11,7 +12,7 @@ class AlbumList extends React.Component {
   }
 
   componentDidMount(){
-      fetch("https://albertobonora.com/feeds/wp-json/wp/v2/albums?filter[category_name]=best-of-2019&filter[posts_per_page]=50")
+      fetch("https://albertobonora.com/feeds/wp-json/wp/v2/albums?filter[category_name]=best-of-"+this.props.yearfilter+"&filter[posts_per_page]="+this.props.totalAlbums)
       .then(res => res.json())
       .then(
           (result) => {
@@ -33,7 +34,7 @@ class AlbumList extends React.Component {
   }
   createYoutube(youtubeid){
     var src = "https://www.youtube.com/embed/"+youtubeid;
-    var fullurl = '<iframe src="'+src+'" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>';
+    var fullurl = '<iframe class="lazyload" data-src="'+src+'" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>';
     return this.createMarkup(fullurl);
   }
   render(){
@@ -70,7 +71,7 @@ class AlbumList extends React.Component {
                               <h4 dangerouslySetInnerHTML={this.createMarkup(item.meta_box.artist) }></h4>
                             </div>
                             <div className="album-cover">
-                              <img src={item.meta_box.albumArt[0].full_url} alt={item.title.rendered + " - " + item.meta_box.artist} title={item.title.rendered + " - " + item.meta_box.artist} />
+                              <img className="lazyload" data-src={item.meta_box.albumArt[0].full_url} alt={item.title.rendered + " - " + item.meta_box.artist} title={item.title.rendered + " - " + item.meta_box.artist} />
                             </div>
                         </div>
                         <div className="album-review">

@@ -14,7 +14,7 @@ class App extends React.Component{
         return(
             <div>
                 <LandingScreen title="Best Albums of" subtitle="2019" />
-                <AlbumList yearfilter="2019" headerTitle="Best Albums of 2019" site="albertobonora.com" />
+                <AlbumList totalAlbums="50" yearfilter="2019" headerTitle="Best Albums of 2019" site="albertobonora.com" />
                 <Footer />
             </div>
         )
